@@ -1,1 +1,43 @@
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+#theevent {
+
+    width: 200px;
+    padding: 25px;
+    /*height: 100%;*/
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+body {
+    padding: 60px 15px 15px 15px;
+
+}
+
+.container .text-muted {
+    margin: 20px 0;
+}
+
+code {
+    font-size: 80%;
+}
