@@ -1,0 +1,47 @@
+Hej, här är era webbservices, ni kan dela med resten av gruppen. Jag kommer också lägga upp det allmänt snart med mer information.
+
+GET
+Hämta alla kunder
+http://nackademiska.azurewebsites.net/2/getcustomers
+
+Hämta alla leverantörer
+http://nackademiska.azurewebsites.net/2/getsuppliers
+
+Hämta detaljerad information om en kund
+http://nackademiska.azurewebsites.net/2/getcustomerdetails
+Parametrar:
+  Customerid
+
+
+Hämta detaljerad information om en leverantör
+http://nackademiska.azurewebsites.net/2/getsupplierdetails
+Parametrar:
+  Supplierid
+
+
+Hämta alla pågående auktioner
+http://nackademiska.azurewebsites.net/2/getongoingauctions
+Parametrar:
+  categoryid (optional)
+
+Hämta en specifik auktion
+http://nackademiska.azurewebsites.net/2/getauctiondetails
+Parametrar:
+  auctionid
+
+Hämta alla kategorier
+http://nackademiska.azurewebsites.net/2/getcategories
+
+Lägg ett bud
+http://nackademiska.azurewebsites.net/2/addoffer
+Parametrar:
+  Customerid
+  auctionid
+  offer
+
+POST
+Logga in
+http://nackademiska.azurewebsites.net/2/login
+Parametrar:
+  email
+  password
