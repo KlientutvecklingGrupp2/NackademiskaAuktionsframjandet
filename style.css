@@ -4,6 +4,12 @@ html {
     min-height: 100%;
 }
 
+#klubba {
+	width: 100px;
+	height: 100px;
+}
+
+
 body {
     margin-bottom: 60px;
 }

@@ -12,22 +12,20 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
 
-
     <!-- TEST script -->
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
 
 </head>
 <body>
 
 <header>
 
-<input class="btn btn-default" type="button" value="Sign in">
+<img id="klubba" src="images/cirkel-auktionsklubba.png">
 
 
     <div class="container">
-        <!-- img id="bild" src="src.jpeg"-->
+
         <br>
         <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#start">Startsida</a></li>
@@ -40,11 +38,13 @@
         <div class="tab-content">
 
             <div id="start" class="tab-pane fade in active">
-                <h3>Home</h3>
+                <h3>Hem</h3>
 
                 <div class="ui-widget">
                     <label for="search">Search: </label>
                     <input id="search">
+                <label for="tags">Sök: </label>
+                <input id="tags">
                 </div>
 
                     <div class="container">
@@ -67,6 +67,29 @@
             <div id="auctions" class="tab-pane fade">
                 <h3>Pågående auktioner</h3>
 
+                <button id="listcurrentauctions">Lista pågående auktioner</button>
+                <button id="clearlist">Rensa lista</button>
+
+                <table class="table table-striped">
+
+                    <thead>
+                    <tr>
+                        <th id="id">Id</th>
+                        <th id="name">Titel</th>
+                        <th id="descripton">Beskrivning</th>
+                        <th id="starttime">Start</th>
+                        <th id="endtime">Slut</th>
+                        <th id="categoryid">Kategori(id)</th>
+                        <th id="supplier">Leverantör</th>
+                        <th id="accprice">Acceptpris</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+
             </div>
             <div id="signup" class="tab-pane fade">
                 <h3>Test</h3>
@@ -75,6 +98,7 @@
 
             <div id="contact" class="tab-pane fade">
                 <h3>Kontakta Gunnar</h3>
+
 
             </div>
         </div>
