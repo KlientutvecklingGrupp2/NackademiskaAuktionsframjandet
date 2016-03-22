@@ -9,7 +9,8 @@ $(document).ready(function () {
                     "<tr><td>" + auction.Name + " </td>" + "<td>" + auction.Description + "</td>" +
                     "<td>" + auction.EndTime + "</td>" + "<td>" + auction.CategoryId + "</td>" +
                     "<td>" + auction.AcceptPrice +
-                    "</td></tr>")
+                    "</td></tr>"
+                )
             });
         });
         $("tr").show();
