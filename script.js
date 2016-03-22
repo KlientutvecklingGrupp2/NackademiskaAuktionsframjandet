@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $("tr").hide();
     $("#listcurrentauctions").click(function () {
+        $("tbody").empty();
         $.getJSON("http://nackademiska.azurewebsites.net/2/getongoingauctions", function (data) {
             $.each(data, function (i, auction) {
                 $("tbody").append(
@@ -18,6 +19,17 @@ $(document).ready(function () {
         $("tr").hide();
     });
 });
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 $(function() {
