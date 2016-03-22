@@ -20,13 +20,6 @@ $(document).ready(function () {
         $("tr").hide();
     });
 
-
-        $(".tbody").delegate('tr', 'click', function() {
-            alert("You clicked me!");
-
-
-    });
-
 });
 
 
