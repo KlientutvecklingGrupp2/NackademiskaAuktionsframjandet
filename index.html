@@ -97,7 +97,20 @@
                 <h3>Kontakt</h3>
                 <br>
                 <p>Kontakta Gunnar via epost:
-                    <a href="mailto:gunnar@na.se?Subject=Hej%Gunnar" target="_top">gunnar@na.se</a>
+                    
+                    <form role="form">
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="question">Fråga:</label>
+    <textarea type="text" class="form-control" id="question"></textarea>
+  </div>
+  
+  <button type="send" class="btn btn-default">Skicka</button>
+</form>
+                    
                 </p>
 
             </div>
