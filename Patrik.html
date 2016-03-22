@@ -1,0 +1,49 @@
+<div class="modal fade" id="contact" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <form class="form-horizontal" id="skickadata" action="http://nackevent.azurewebsites.net/addattendee" method="post">
+                        <div class="modal-header">
+                            <h4>Anmäl dig</h4>
+                        </div>
+                            <div class="modal-body">
+
+                                <div id="formgroup" class="form-group">
+
+                                    <label for="reg-name" class="col-lg-2 control-label">Förnamn:</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Förnamn" required>
+                                    </div>
+
+                                </div>
+
+
+                                <div id="formgroup" class="form-group">
+
+                                    <label for="reg-lastname" class="col-lg-2 control-label">Efternamn:</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control"  name="lastname" id="lastname" placeholder="efternamn" required>
+                                    </div>
+
+                                </div>
+
+                                <div id="formgroup" class="form-group">
+
+                                    <label for="reg-email" class="col-lg-2 control-label">Email:</label>
+                                    <div class="col-lg-10">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="email@mail.se" required>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" type="submit" id="submiter" name="submiter">Anmäl</button>
+                            <a class="btn btn-default" data-dismiss="modal">Stäng</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
