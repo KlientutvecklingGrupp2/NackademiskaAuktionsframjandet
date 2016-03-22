@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 
 
-
+/*
 
 $(function() {
     var availableTags = [
@@ -70,3 +70,5 @@ $(function() {
   });
 
 });
+
+*/
