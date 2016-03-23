@@ -1,9 +1,23 @@
 $(document).ready(function() {
 
-    $.getJSON("http://nackademiska.azurewebsites.net/2/getcategories", function(data) {
-        $.each(data, function(i, deltagare) {
+    $('testrow').click(function() {
+        var href = $(this).find("a").attr("href");
+        if(href) {
+            window.location = href;
+        }
+    });
 
-				$("tbody").append("<tr><td>" + deltagare.Name + "</td></tr>"), "cyckel"
+});
+
+
+/*
+
+$(document).ready(function() {
+
+    $.getJSON("http://nackademiska.azurewebsites.net/2/getcategories", function(data) {
+        $.each(data, function(i, getcategories) {
+
+				$("#body").append("<tr><td>" + getcategories.Name + "</td></tr>")
 
     });
 
@@ -12,8 +26,6 @@ $(document).ready(function() {
 });
 
 
-
-/*
 
 $(function() {
     var availableTags = [

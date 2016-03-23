@@ -1,12 +1,13 @@
 $(document).ready(function () {
 
+
     $("tr").hide();
     $("#listcurrentauctions").click(function () {
         $("tbody").empty();
         $.getJSON("http://nackademiska.azurewebsites.net/2/getongoingauctions", function (data) {
             $.each(data, function (i, auction) {
                 $("tbody").append(
-                    "<tr><td>" + auction.Name + " </td>" + "<td>" + auction.Description + "</td>" +
+                    "<tr id='testrow'><td><a href='#'>" + auction.Name + "</a></td>" + "<td>" + auction.Description + "</td>" +
                     "<td>" + auction.EndTime + "</td>" + "<td>" + auction.CategoryId + "</td>" +
                     "<td>" + auction.AcceptPrice +
                     "</td></tr>"
@@ -14,11 +15,21 @@ $(document).ready(function () {
             });
         });
         $("tr").show();
+
+            $('tr').click(function() {
+        var href = $(this).find("a").attr("href");
+        if(href) {
+            window.location = href;
+        }
+    });
+
+
     });
     $("#clearlist").click(function () {
         $("tbody").empty();
         $("tr").hide();
     });
+
 });
 
 
