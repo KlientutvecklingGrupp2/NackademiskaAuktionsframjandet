@@ -1,5 +1,6 @@
 $(document).ready(function () {
-
+	
+	
 
     $("tr").hide();
     $("#listcurrentauctions").click(function () {
@@ -16,12 +17,6 @@ $(document).ready(function () {
         });
         $("tr").show();
 
-            $('tr').click(function() {
-        var href = $(this).find("a").attr("href");
-        if(href) {
-            window.location = href;
-        }
-    });
 
 
     });
@@ -31,10 +26,6 @@ $(document).ready(function () {
     });
 
 });
-
-
-
-
 
 
 
