@@ -102,7 +102,7 @@
 
                 <p>Kontakta Gunnar via epost:
         <div class="container-center">
-            <form role="form">
+            <form id="formen" role="form">
 
                 <div class="form-group">
                     <label for="email">Email address:</label>
@@ -114,7 +114,14 @@
                     <textarea type="text" class="form-control" id="question"></textarea>
                 </div>
 
-                <button type="send" class="btn btn-default">Skicka</button>
+                <input type="button" class="btn btn-default" onclick="myFunction()" value="Skicka">
+                
+                <script>
+          function myFunction(){
+		  document.getElementById("formen").reset();
+		  }
+                </script>
+                
             </form>
         </div>
 
