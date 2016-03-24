@@ -12,95 +12,81 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <!-- TEST script -->
- <!--    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
-
+    <!--    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+       <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
 </head>
+
 <body>
 
 <header>
 
-<img id="klubba" src="images/cirkel-auktionsklubba.png">
-
+    <img id="klubba" src="images/cirkel-auktionsklubba.png">
 
     <div class="container">
 
         <br>
         <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#start">Startsida
-            
-            <span class="glyphicon glyphicon-home" aria-hidden="true"></span> 
-            
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
             </a></li>
             <li><a data-toggle="tab" href="#auctions">Pågående auktioner
-            
-            <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> 
-            
+                <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
             </a></li>
-            
             <li><a data-toggle="tab" href="#contact">Kontakt
-            
-            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> 
-            
+                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
             </a></li>
-                  
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" ">Inställningar
-            
-            <span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-            <ul class="dropdown-menu">
-            <li><a href="signupPatrikO.html">Logga ut</a></li>
-            </ul>
-            
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="signupPatrikO.html">Logga ut</a></li>
+                </ul>
             </li>
         </ul>
     </div>
 </header>
-        <div class="tab-content">
-            <div id="start" class="tab-pane fade in active">
-                <h3>Hem</h3>
 
-                <div class="ui-widget">
-                <label for="tags">Sök: </label>
-                <input id="tags">
+<div class="tab-content">
+    <div id="start" class="tab-pane fade in active">
+        <h3>Hem</h3>
 
-                    <a href="gunnars-App.rar">ladda ner vår app</a>
+        <div class="ui-widget">
+            <label for="tags">Sök: </label>
+            <input id="tags">
 
-                </div>
+            <a href="gunnars-App.rar">ladda ner vår app</a>
+        </div>
 
+    </div>
 
+    <div id="auctions" class="tab-pane fade">
+        <h3>Pågående auktioner</h3>
 
+        <button id="listcurrentauctions">Lista pågående auktioner</button>
+        <button id="clearlist">Rensa lista</button>
 
-            </div>
-            <div id="auctions" class="tab-pane fade">
-                <h3>Pågående auktioner</h3>
+        <table id="table2" class="table table-striped">
 
-                <button id="listcurrentauctions">Lista pågående auktioner</button>
-                <button id="clearlist">Rensa lista</button>
+            <thead>
+            <tr id="auctionlist">
+                <th id="name">Titel</th>
+                <th id="descripton">Beskrivning</th>
+                <th id="endtime">Slut</th>
+                <th id="categoryid">Kategori(id)</th>
+                <th id="accprice">Acceptpris</th>
+            </tr>
+            </thead>
+            <tbody>
 
-                <table id="table2" class="table table-striped">
+            </tbody>
 
-                    <thead>
-                    <tr id="auctionlist">
-                        <th id="name">Titel</th>
-                        <th id="descripton">Beskrivning</th>
-                        <th id="endtime">Slut</th>
-                        <th id="categoryid">Kategori(id)</th>
-                        <th id="accprice">Acceptpris</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+        </table>
 
-                    </tbody>
+    </div>
 
-                </table>
+    <div id="contact" class="tab-pane fade">
+        <h3>Kontakt</h3><br>
 
-            </div>
-
-
-            <div id="contact" class="tab-pane fade">
-                <h3>Kontakt</h3><br>
-
-                <p>Kontakta Gunnar via epost:
+        <p>Kontakta Gunnar via epost:
         <div class="container-center">
             <form id="formen" role="form">
 
@@ -115,31 +101,23 @@
                 </div>
 
                 <input type="button" class="btn btn-default" onclick="myFunction()" value="Skicka">
-                
+
                 <script>
-          function myFunction(){
-		  document.getElementById("formen").reset();
-		  }
+                    function myFunction(){
+                        document.getElementById("formen").reset();
+                    }
                 </script>
-                
+
             </form>
         </div>
 
-                </p>
-
-            </div>
-        </div>
-
-
-<!--footer-- class="footer">
-
-    <div class="container">
-        <p class="text-muted">&copy; Nackademiska Auktionsfrämjandet</p>
+        </p>
 
     </div>
-</footer-->
+</div>
 
     <script src="scriptDetail.js"></script>
     <script src="scriptBase.js"></script>
+
 </body>
 </html>
