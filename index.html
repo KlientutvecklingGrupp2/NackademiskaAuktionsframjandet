@@ -11,9 +11,23 @@
     <!-- jQuery-script kan läsas in i head eftersom eventet $(document).ready väntar till hela dokumentet är inläst. -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <!-- TEST script -->
-    <!--    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-       <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+
+    	<!-- ---------RÖR EJ SCRIPTEN SUPER VIKTIGT---------- -->
+    	
+    	<!-- ---------DYNAMIC---------- -->
+		<script src="http://listjs.com/no-cdn/list.js"></script>
+		
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		
+		<!-- ---------FIL ---------- -->
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		
+       <!-- -------------------------------------------------- -->
+       
+       
 </head>
 
 <body>
@@ -63,30 +77,34 @@
 
         <button id="listcurrentauctions">Lista pågående auktioner</button>
         <button id="clearlist">Rensa lista</button>
+        
+        
+        <div id="users">
+				<input class="search" placeholder="Search" />
+				
+				<table class="table table-striped">
+					
+					<thead>
+						<tr>
+                        	<th>ID</th>
+							<th>Namn</th>
+							<th>Efternamn</th>
+							<th>Mail</th>
+						</tr>
+					</thead>
 
-        <table id="table2" class="table table-striped">
-
-            <thead>
-            <tr id="auctionlist">
-                <th id="name">Titel</th>
-                <th id="descripton">Beskrivning</th>
-                <th id="endtime">Slut</th>
-                <th id="categoryid">Kategori(id)</th>
-                <th id="accprice">Acceptpris</th>
-            </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-
-        </table>
+					<tbody class="list">
+						
+					</tbody>
+				</table>
+			</div>
 
     </div>
 
     <div id="contact" class="tab-pane fade">
         <h3>Kontakt</h3><br>
 
-        <p>Kontakta Gunnar via epost:
+        <p>Kontakta Gunnar via epost:</p>
         <div class="container-center">
             <form id="formen" role="form">
 
@@ -110,8 +128,6 @@
 
             </form>
         </div>
-
-        </p>
 
     </div>
 </div>
