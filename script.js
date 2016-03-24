@@ -1,8 +1,6 @@
 $(document).ready(function () {
-	
-	
-
     $("tr").hide();
+
     $("#listcurrentauctions").click(function () {
         $("tbody").empty();
         $.getJSON("http://nackademiska.azurewebsites.net/2/getongoingauctions", function (data) {
@@ -16,54 +14,10 @@ $(document).ready(function () {
             });
         });
         $("tr").show();
-
-
-
     });
+
     $("#clearlist").click(function () {
         $("tbody").empty();
         $("tr").hide();
     });
-
 });
-
-
-
-
-
-
-
-
-
-
-/*
-$(function() {
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( "#tags" ).autocomplete({
-      source: availableTags
-    });
-  });
-*/
