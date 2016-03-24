@@ -11,23 +11,9 @@
     <!-- jQuery-script kan läsas in i head eftersom eventet $(document).ready väntar till hela dokumentet är inläst. -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-
-    	<!-- ---------RÖR EJ SCRIPTEN SUPER VIKTIGT---------- -->
-    	
-    	<!-- ---------DYNAMIC---------- -->
-		<script src="http://listjs.com/no-cdn/list.js"></script>
-		
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-		
-		<!-- ---------FIL ---------- -->
-		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-		
-		
-       <!-- -------------------------------------------------- -->
-       
-       
+    <!-- TEST script -->
+    <!--    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+       <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
 </head>
 
 <body>
@@ -40,19 +26,19 @@
 
         <br>
         <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#start">Startsida
+            <li class="active" id="startID"><a data-toggle="tab" href="#start" >Startsida
                 <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
             </a></li>
-            <li><a data-toggle="tab" href="#auctions">Pågående auktioner
+            <li id="auctionsID"><a data-toggle="tab" href="#auctions" >Pågående auktioner
                 <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
             </a></li>
-            <li><a data-toggle="tab" href="#contact">Kontakt
+            <li id="contactID"><a data-toggle="tab" href="#contact" >Kontakt
                 <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
             </a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" ">Inställningar
+            <li class="dropdown" id="dropdownID"><a class="dropdown-toggle" data-toggle="dropdown" href="#" >Inställningar
                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="signupPatrikO.html">Logga ut</a></li>
+                    <li><a href="signupPatrikO.html" id="logOut">Logga in</a></li>
                 </ul>
             </li>
         </ul>
@@ -64,46 +50,80 @@
         <h3>Hem</h3>
 
         <div class="ui-widget">
-            
+            <label for="tags">Sök: </label>
+            <input id="tags">
 
             <a href="gunnars-App.rar">ladda ner vår app</a>
         </div>
 
     </div>
 
-
     <div id="auctions" class="tab-pane fade">
         <h3>Pågående auktioner</h3>
 
         <button id="listcurrentauctions">Lista pågående auktioner</button>
         <button id="clearlist">Rensa lista</button>
+
+        <table id="table2" class="table table-striped">
+
+            <thead>
+            <tr id="auctionlist">
+                <th id="picture">Bild</th>
+                <th id="name">Titel</th>
+                <th id="descripton">Beskrivning</th>
+                <th id="id">Id</th>
+                <th id="endtime">Slut</th>
+                <th id="categoryid">Kategori(id)</th>
+                <th id="accprice">Acceptpris</th>
+            </tr>
+            </thead>
+            <tbody id="tbody1">
+
+            </tbody>
+			
+			
+
+        </table>
         
-        	<div id="users">
-				<input class="search" placeholder="Search" />
-				
-				<table class="table table-striped">
-					
-					<thead>
-						<tr>
-                        	<th>ID</th>
-							<th>Namn</th>
-							<th>Efternamn</th>
-							<th>Mail</th>
-						</tr>
-					</thead>
+	<div class="row">
+		<div class="col-lg-9 col-lg-offset-1 centered">
+			      <table id="table3" class="table table-striped">
 
-					<tbody class="list">
-						
-					</tbody >
-				</table>
-			</div>
+            <thead>
+            <tr id="auctionlist2">
+                <th id="name">Titel</th>
+                <th id="descripton">Beskrivning</th>
+                <th id="id">Id</th>
+                <th id="startTime">Start</th>
+                <th id="endtime">Slut</th>
+                <th id="categoryid">Kategori(id)</th>
+                <th id="supplierId">Leverantlör(id)</th>
+                <th id="accprice">Acceptpris</th>
+                <th id="buyaccept"></th>
+                <th id="Sold">Såld</th>
+                <th id="yesss">$ ??</th>
+                <th id="button"></th>
+            </tr>
+            </thead>
+            <tbody id="tbody2">
 
+            </tbody>
+			
+			
+
+        </table>
+		
+        </div>
+        
+    </div>
+      
+        
     </div>
 
     <div id="contact" class="tab-pane fade">
         <h3>Kontakt</h3><br>
 
-        <p>Kontakta Gunnar via epost:</p>
+        <p>Kontakta Gunnar via epost:
         <div class="container-center">
             <form id="formen" role="form">
 
@@ -127,6 +147,8 @@
 
             </form>
         </div>
+
+        </p>
 
     </div>
 </div>

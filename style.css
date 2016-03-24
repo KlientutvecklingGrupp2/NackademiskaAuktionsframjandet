@@ -67,3 +67,15 @@ body {
 code {
     font-size: 80%;
 }
+
+#auctionsID {
+	display: none;
+}
+
+#startID {
+	display: none;
+}
+
+#start {
+	display: none;
+}

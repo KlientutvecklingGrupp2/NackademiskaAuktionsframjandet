@@ -11,7 +11,8 @@ function postForm() {
     url: 'http://nackademiska.azurewebsites.net/2/login',
     data: cust,
     success: function(data) {
-        alert('User ' + data.Id + " is now logged in");
+        //alert('User ' + data.Id + " is now logged in");
+        sessionStorage.setItem('useridasd123kapparosshello', data.Id);
         location.href = "index.html";
     },
     error: function(data) {
