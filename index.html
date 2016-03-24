@@ -23,7 +23,6 @@
 		
 		<!-- ---------FIL ---------- -->
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		
        <!-- -------------------------------------------------- -->
        
@@ -77,11 +76,13 @@
         <button id="listcurrentauctions">Lista pågående auktioner</button>
         <button id="clearlist">Rensa lista</button>
         
+        <input type="text" id="search" placeholder="Type to search">
+        
         
         <div id="users">
 				<input class="search" placeholder="Search" />
 				
-				<table class="table table-striped">
+				<table id="table" class="table table-striped">
 					
 					<thead>
 						<tr>
