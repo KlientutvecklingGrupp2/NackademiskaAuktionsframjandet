@@ -11,8 +11,12 @@ $(document).ready(function () {
 		
 
     $("tr").hide();
+    $("#h2ID").hide();
+    $("#h3ID").hide();
     $("#listcurrentauctions").click(function () {
         $("#tbody1").empty();
+        $("#h2ID").show();
+        $("#h3ID").show();
         $.getJSON("http://nackademiska.azurewebsites.net/2/getongoingauctions", function (data) {
             $.each(data, function (i, auction) {
                 $("#tbody1").append(
@@ -25,7 +29,7 @@ $(document).ready(function () {
                 )
             });
         });
-        
+
         $('#tbody1').on('click', 'tr', function(){
             $.getJSON("http://nackademiska.azurewebsites.net/2/getauctiondetails?auctionid=" + this.childNodes[3].innerHTML, function(auction) {   
                     $("#tbody2").append(    	
@@ -46,11 +50,11 @@ $(document).ready(function () {
         
         $('#tbody2').on('click', 'tr', function() {
         	$.getJSON("http://nackademiska.azurewebsites.net/2/getsupplierdetails?supplierid=" + this.childNodes[6].innerHTML, function(supplier) {
-        		$("#tbody2").append(  
+        		$("#tbody3").append(  
         				"<tr id='test2'><td><a href='#'>"  + supplier.Name + "</a></td>" + "<td>" + supplier.Address + "</td>" +
                         "<td id='supI'>" + supplier.Id + "</td>" +
                         "<td>" + supplier.PostalCode  + "</td>" + "<td>" + supplier.City  + "</td>" +
-                        "<td>" + supplier.Phone  +
+                        "<td>" + supplier.Phone  + "<td>" + supplier.Email + "</td>" + "<td>" + supplier.Provision + "</td>" +
                         "</td></tr>"
         				
         				)
@@ -66,6 +70,9 @@ $(document).ready(function () {
     $("#clearlist").click(function () {
         $("#tbody1").empty();
         $("#tbody2").empty();
+        $("#tbody3").empty();
+        $("#h2ID").hide();
+        $("#h3ID").hide();
         $("tr").hide();
     });
 
@@ -137,37 +144,3 @@ $('#logOut').click(function(e) {
 	e.preventDefault();
 });
 
-
-
-
-/*
-$(function() {
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( "#tags" ).autocomplete({
-      source: availableTags
-    });
-  });
-*/
