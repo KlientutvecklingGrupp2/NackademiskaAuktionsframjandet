@@ -15,6 +15,8 @@
     <!--    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
        
+    <script src="http://listjs.com/no-cdn/list.js"></script>
+       
 
 
 
@@ -54,10 +56,9 @@
         <h3>Hem</h3>
 
         <div class="ui-widget">
-            <label for="tags">Sök: </label>
-            <input id="tags">
+            
 
-            <a href="gunnars-App.rar">ladda ner vår app</a>
+            <a class="btn btn-warning" href="gunnars-App.rar">ladda ner vår app här</a>
         </div>
 
     </div>
@@ -67,16 +68,20 @@
 
         <button id="listcurrentauctions">Lista pågående auktioner</button>
         <button id="clearlist">Rensa lista</button>
+	  <input type="text" id="search" placeholder="Filtrera">
+	  
+	  
+
 
         <table id="table2" class="table table-striped">
 
             <thead>
             <tr id="auctionlist">
                 <th id="picture">Bild</th>
-                <th id="name">Titel</th>
+                <th id="name">Namn</th>
                 <th id="descripton">Beskrivning</th>
                 <th id="id">Id</th>
-                <th id="endtime">Slut</th>
+                <th id="endtime">Slutdatum</th>
                 <th id="categoryid">Kategori(id)</th>
                 <th id="accprice">Acceptpris</th>
             </tr>
@@ -87,51 +92,60 @@
             
         </table>
         
-        
-        <div id="users">
-				<input class="search" placeholder="Search" />
-				<button id="backbtn">Back
-				</button>
-
-				<table class="table table-striped">
-					
-					<thead>
-						<tr>
-                        	<th>ID</th>
-							<th>Namn</th>
-							<th>Efternamn</th>
-							<th>Mail</th>
-						</tr>
-					</thead>
-
-					<tbody class="list">
-						
-					</tbody>
-				</table>
-			</div>
 
         
 	<div class="row">
 		<div class="col-lg-9 col-lg-offset-1 centered">
+		<h4 id="h2ID">Budgivning</h4>
 			      <table id="table3" class="table table-striped">
-
-            <thead>
+			
+            <thead>      
             <tr id="auctionlist2">
-                <th id="name">Titel</th>
-                <th id="descripton">Beskrivning</th>
+                <th id="name">Bild</th>
+                <th id="descripton">Namn</th>
                 <th id="id">Id</th>
                 <th id="startTime">Start</th>
                 <th id="endtime">Slut</th>
                 <th id="categoryid">Kategori(id)</th>
-                <th id="supplierId">Leverantlör(id)</th>
+                <th id="supplierId">Leverantör(id)</th>
                 <th id="accprice">Acceptpris</th>
                 <th id="buyaccept"></th>
                 <th id="Sold">Såld</th>
-                <th id="yesss">$ ??</th>
+                <th id="yesss">Ange belopp för budning</th>
                 <th id="button"></th>
             </tr>
             </thead>
             <tbody id="tbody2">
+
+            </tbody>
+			
+			
+
+        </table>
+		
+        </div>
+        
+    </div>
+    
+    
+    <div class="row">
+		<div class="col-lg-8 col-lg-offset-1 centered">
+		<h4 id="h3ID">Info: Leverantör</h4>
+			      <table id="table4" class="table table-striped">
+
+            <thead>
+            <tr id="auctionlist3">
+                <th id="name">Företag</th>
+                <th id="descripton">Adress</th>
+                <th id="id">Id</th>
+                <th id="startTime">Post kod</th>
+                <th id="endtime">Stad</th>
+                <th id="categoryid">Telefon</th>
+                <th id="supplierId">Email</th>
+                <th id="accprice">Provision</th>
+            </tr>
+            </thead>
+            <tbody id="tbody3">
 
             </tbody>
 			
@@ -174,14 +188,11 @@
             </form>
         </div>
 
-        
 
     </div>
 </div>
-
 	
-	<script src="jquery.filtertable.js" type="text/javascript"></script>
-
+	<script src="jquery.filtertable.js"></script>
     <script src="scriptDetail.js"></script>
     <script src="scriptBase.js"></script>
     <script src="script.js"></script>
