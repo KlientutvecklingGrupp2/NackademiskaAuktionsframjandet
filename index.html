@@ -1,215 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>GunnarsFrontend</title>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <!-- jQuery-script kan läsas in i head eftersom eventet $(document).ready väntar till hela dokumentet är inläst. -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>test</title>
 
-    <!-- TEST script -->
-    <!--    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-       <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
-       
-    <script src="http://listjs.com/no-cdn/list.js"></script>
-       
-
-
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
 
 </head>
 
 <body>
 
-<header>
-
-    <img id="klubba" src="images/cirkel-auktionsklubba.png">
-
-    <div class="container">
-
-        <br>
-        <ul class="nav nav-tabs">
-            <li class="active" id="startID"><a data-toggle="tab" href="#start" >Startsida
-                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-            </a></li>
-            <li id="auctionsID"><a data-toggle="tab" href="#auctions" >Pågående auktioner
-                <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
-            </a></li>
-            <li id="contactID"><a data-toggle="tab" href="#contact" >Kontakt
-                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-            </a></li>
-            <li class="dropdown" id="dropdownID"><a class="dropdown-toggle" data-toggle="dropdown" href="#" >Inställningar
-                <span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="signin.html" id="logOut">Logga in</a></li>
-                </ul>
-            </li>
-        </ul>
+<div class="container">
+    <br><br><br><br><br><br><br><br>
+    <div class="col-lg-2 col-lg-offset-4 centered ">
+        <img src="images/cirkel-auktionsklubba.png">
     </div>
-</header>
-
-<div class="tab-content">
-    <div id="start" class="tab-pane fade in active">
-        <h3>Hem</h3>
-
-        <div class="ui-widget">
-            
-            <a class="btn btn-warning" href="gunnars-App.rar">ladda ner vår app här</a>
-        </div>
-
-    </div>
-
-    <div id="auctions" class="tab-pane fade">
-        <h3>Pågående auktioner</h3>
-
-       <button class="btn btn-info" id="listcurrentauctions">Lista pågående auktioner</button>
-       <button class="btn btn-info" id="clearlist">Rensa lista</button>
-	  
-	  	  
-	<div id="users">
-	
-	
-	<div class="row">
-  
-  	<div class="col-lg-4">
-   	 	<div class="input-group">
-    	 	<input type="text" class="form-control search" placeholder="Sök">
-    		 	<span class="input-group-btn">
-    	 	   <button class="btn btn-default sort" data-sort="name" type="button">Sortera</button>
-  	   		 </span>
-  	  		</div>
- 	 	</div>
-	</div>
-	
-	
-
-        <table id="table2" class="table table-striped">
-
-            <thead>
-            <tr id="auctionlist">
-                <th id="picture">Bild</th>
-                <th id="name">Namn</th>
-                <th id="descripton">Beskrivning</th>
-                <th id="id">Id</th>
-                <th id="endtime">Slutdatum</th>
-                <th id="categoryid">Kategori(id)</th>
-                <th id="accprice">Acceptpris</th>
-            </tr>
-            </thead>
-            <tbody class="list" id="tbody1">
-
-            </tbody>
-            
-        </table>
-        
-	</div>
-	
-        
-	<div class="row">
-		<div class="col-lg-9 col-lg-offset-1 centered">
-		<h4 id="h2ID">Budgivning</h4>
-			      <table id="table3" class="table table-striped">
-			
-            <thead>      
-            <tr id="auctionlist2">
-                <th id="name">Bild</th>
-                <th id="descripton">Namn</th>
-                <th id="id">Id</th>
-                <th id="startTime">Start</th>
-                <th id="endtime">Slut</th>
-                <th id="categoryid">Kategori(id)</th>
-                <th id="supplierId">Leverantör(id)</th>
-                <th id="accprice">Acceptpris</th>
-                <th id="buyaccept"></th>
-                <th id="Sold">Såld</th>
-                <th id="yesss">Ange belopp för budning</th>
-                <th id="button"></th>
-            </tr>
-            </thead>
-            <tbody id="tbody2">
-
-            </tbody>
-			
-			
-
-        </table>
-		
-        </div>
-        
-    </div>
-    
-    
+    <br><br><br><br><br><br><br><br><br><br><br>
     <div class="row">
-		<div class="col-lg-8 col-lg-offset-1 centered">
-		<h4 id="h3ID">Info: Leverantör</h4>
-			      <table id="table4" class="table table-striped">
-
-            <thead>
-            <tr id="auctionlist3">
-                <th id="name">Företag</th>
-                <th id="descripton">Adress</th>
-                <th id="id">Id</th>
-                <th id="startTime">Post kod</th>
-                <th id="endtime">Stad</th>
-                <th id="categoryid">Telefon</th>
-                <th id="supplierId">Email</th>
-                <th id="accprice">Provision</th>
-            </tr>
-            </thead>
-            <tbody id="tbody3">
-
-            </tbody>
-			
-			
-
-        </table>
-		
-        </div>
-        
-    </div>
-      
-        
-    </div>
-
-    <div id="contact" class="tab-pane fade">
-        <h3>Kontakt</h3><br>
-
-        <p>Kontakta Gunnar via epost:</p>
-        <div class="container-center">
-            <form id="formen" role="form">
-
-                <div class="form-group">
-                    <label for="email">Email address:</label>
-                    <input type="email" class="form-control" id="email">
-                </div>
-
-                <div class="form-group">
-                    <label for="question">Fråga:</label>
-                    <textarea type="text" class="form-control" id="question"></textarea>
-                </div>
-
-                <input type="button" class="btn btn-default" onclick="myFunction()" value="Skicka">
-
-                <script>
-                    function myFunction(){
-                        document.getElementById("formen").reset();
-                    }
-                </script>
-
+        <div class="col-lg-2 col-lg-offset-4 centered ">
+            <form id="myForm">
+                Epost <input type="text" name="email" id="email"><br>
+                Lösenord <input type="password" name="password" id="password"><br>
+                <br>
+                <button id="add">Logga in</button>
             </form>
         </div>
-
-
     </div>
 </div>
-	
-	<script src="jquery.filtertable.js"></script>
-    <script src="scriptDetail.js"></script>
-    <script src="scriptBase.js"></script>
-    <script src="script.js"></script>
 
 </body>
+
+<script type="text/javascript" src="loginscript.js"></script>
+
 </html>

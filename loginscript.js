@@ -13,7 +13,7 @@ function postForm() {
     success: function(data) {
         //alert('User ' + data.Id + " is now logged in");
         sessionStorage.setItem('useridasd123kapparosshello', data.Id);
-        location.href = "index.html";
+        location.href = "main.html";
     },
     error: function(data) {
     	alert(JSON.stringify(data));
