@@ -44,7 +44,7 @@
             <li class="dropdown" id="dropdownID"><a class="dropdown-toggle" data-toggle="dropdown" href="#" >Inställningar
                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="signupPatrikO.html" id="logOut">Logga in</a></li>
+                    <li><a href="signin.html" id="logOut">Logga in</a></li>
                 </ul>
             </li>
         </ul>
@@ -57,7 +57,6 @@
 
         <div class="ui-widget">
             
-
             <a class="btn btn-warning" href="gunnars-App.rar">ladda ner vår app här</a>
         </div>
 
@@ -66,12 +65,26 @@
     <div id="auctions" class="tab-pane fade">
         <h3>Pågående auktioner</h3>
 
-        <button id="listcurrentauctions">Lista pågående auktioner</button>
-        <button id="clearlist">Rensa lista</button>
-	  <input type="text" id="search" placeholder="Filtrera">
+       <button id="listcurrentauctions">Lista pågående auktioner</button>
+       <button id="clearlist">Rensa lista</button>
 	  
-	  
-
+			  
+	<div id="users">
+	
+	
+	<div class="row">
+  
+  	<div class="col-lg-4">
+   	 	<div class="input-group">
+    	 	<input type="text" class="form-control search" placeholder="Sök">
+    		 	<span class="input-group-btn">
+    	 	   <button class="btn btn-default sort" data-sort="name" type="button">Sortera</button>
+  	   		 </span>
+  	  		</div>
+ 	 	</div>
+	</div>
+	
+	
 
         <table id="table2" class="table table-striped">
 
@@ -86,13 +99,14 @@
                 <th id="accprice">Acceptpris</th>
             </tr>
             </thead>
-            <tbody id="tbody1">
+            <tbody class="list" id="tbody1">
 
             </tbody>
             
         </table>
         
-
+	</div>
+	
         
 	<div class="row">
 		<div class="col-lg-9 col-lg-offset-1 centered">

@@ -20,14 +20,21 @@ $(document).ready(function () {
         $.getJSON("http://nackademiska.azurewebsites.net/2/getongoingauctions", function (data) {
             $.each(data, function (i, auction) {
                 $("#tbody1").append(
-                    "<tr><td><img src='data:image/jpeg;base64,"  + auction.Image + "' height='100' width='100'></td>" + "<td><a href='#'>" + auction.Name + "</a></td>" +
+                    "<tr><td><img src='data:image/jpeg;base64,"  + auction.Image + "' height='100' width='100'></td>" + "<td class='name'><a href='#'>" + auction.Name + "</a></td>" +
                     "<td>" + auction.Description + "</td>" +
                     "<td id='aid'>" + auction.Id + "</td>" +
                     "<td>" + auction.EndTime + "</td>" + "<td>" + auction.CategoryId + "</td>" +
                     "<td>" + auction.AcceptPrice +
                     "</td></tr>"
                 )
+                
+                	var options = {
+                    valueNames: [ 'name' ]
+                    };var userList = new List('users', options);
+                
             });
+            
+            
         });
 
         $('#tbody1').on('click', 'tr', function(){
